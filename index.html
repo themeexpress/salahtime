@@ -3,203 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SalahTime - Prayer Times App</title>
+<title>SalahTime — Your Daily Prayer Companion</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --navy: #1A2B4A;
+    --navy-light: #2A3F66;
+    --cream: #F5F1E8;
+    --cream-light: #FAF7EE;
+    --gold: #E8A547;
+    --accent: #4A7C5D;
+    --text: #1A2B4A;
+    --text-soft: #5C6B82;
+    --border: #E5DFD0;
+}
+
+html { scroll-behavior: smooth; }
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #1B5E37 0%, #2E7D52 100%);
-    min-height: 100vh;
-    color: #333;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
+
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 0 24px;
 }
-.hero {
-    text-align: center;
-    color: white;
-    padding: 60px 20px;
+
+/* NAV */
+nav {
+    background: var(--navy);
+    border-radius: 50px;
+    padding: 14px 24px;
+    margin: 20px auto 0;
+    max-width: 1160px;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
 }
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.hero .moon { font-size: 60px; margin-bottom: 20px; }
-.hero p {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
     font-size: 18px;
-    opacity: 0.95;
-    margin-bottom: 30px;
-}
-.card {
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-.card h2 {
-    color: #1B5E37;
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-.card p {
-    line-height: 1.7;
-    margin-bottom: 12px;
-    color: #555;
-}
-.feature-list {
-    list-style: none;
-    padding: 0;
-}
-.feature-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    color: #555;
-}
-.feature-list li:last-child { border: none; }
-.feature-list .icon {
-    color: #1B5E37;
-    font-weight: bold;
-    margin-right: 10px;
-}
-.contact-box {
-    background: #E8F5EE;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    margin: 20px 0;
-}
-.contact-box a {
-    color: #1B5E37;
-    font-weight: 600;
+    color: white;
     text-decoration: none;
-    font-size: 18px;
 }
-.faq-item {
-    margin-bottom: 20px;
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--gold);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
 }
-.faq-item h3 {
-    color: #1B5E37;
-    font-size: 17px;
-    margin-bottom: 8px;
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
 }
-.footer {
-    text-align: center;
-    color: white;
-    padding: 30px 0;
-    opacity: 0.9;
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
 }
-.footer a { color: white; }
-</style>
-</head>
-<body>
-<div class="container">
+.nav-links a:hover { color: white; }
+.nav-btn {
+    background: white;
+    color: var(--navy) !important;
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+.nav-btn:hover { transform: translateY(-2px); }
 
-<div class="hero">
-<div class="moon">🌙</div>
-<h1>SalahTime</h1>
-<p>Your beautiful prayer companion</p>
-</div>
-
-<div class="card">
-<h2>About SalahTime</h2>
-<p>SalahTime is a beautiful, accurate prayer companion designed to help Muslims worldwide maintain their daily Salah with ease. Whether you're at home, traveling, or working, SalahTime ensures you never miss a prayer.</p>
-</div>
-
-<div class="card">
-<h2>Features</h2>
-<ul class="feature-list">
-<li><span class="icon">🕌</span> Accurate prayer times worldwide</li>
-<li><span class="icon">🔔</span> Beautiful Adhan notifications</li>
-<li><span class="icon">🧭</span> Qibla compass direction</li>
-<li><span class="icon">✓</span> Prayer completion tracking</li>
-<li><span class="icon">📊</span> Daily, weekly, monthly statistics</li>
-<li><span class="icon">🔥</span> Prayer streak tracking</li>
-<li><span class="icon">📅</span> Hijri calendar support</li>
-<li><span class="icon">🔇</span> Per-prayer Silent/Vibrate/Loud</li>
-<li><span class="icon">🌍</span> Works in any country</li>
-<li><span class="icon">🔒</span> Privacy first - no data collection</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq-item">
-<h3>How do I change my location?</h3>
-<p>Go to Settings tab → Location → either enable Auto GPS or search for your city manually.</p>
-</div>
-
-<div class="faq-item">
-<h3>Why are my prayer times slightly different?</h3>
-<p>Different calculation methods produce slightly different times. Go to Settings → Calculation Method to choose the method used by your local mosque.</p>
-</div>
-
-<div class="faq-item">
-<h3>How do I customize Adhan sound for each prayer?</h3>
-<p>Go to Settings → Adhan & Notifications. You can set Silent, Vibrate, or Loud for each prayer individually.</p>
-</div>
-
-<div class="faq-item">
-<h3>Why didn't I receive a notification?</h3>
-<p>Make sure Notifications are enabled: iPhone Settings → SalahTime → Notifications → Allow Notifications.</p>
-</div>
-
-<div class="faq-item">
-<h3>How does the Qibla compass work?</h3>
-<p>The compass uses your iPhone's magnetometer and current location to calculate the direction to Makkah. Hold your phone flat for best accuracy.</p>
-</div>
-
-<div class="faq-item">
-<h3>Is my data private?</h3>
-<p>Yes. All data stays on your device. We don't collect, store, or share any personal information. Your location is used only to calculate prayer times locally.</p>
-</div>
-
-<div class="faq-item">
-<h3>Does the app work offline?</h3>
-<p>Prayer times are cached after the first fetch, so they work offline. You need the internet only when changing location or first launch.</p>
-</div>
-
-</div>
-
-<div class="card">
-<h2>Contact & Support</h2>
-<p>Have a question, suggestion, or feedback? We'd love to hear from you!</p>
-<div class="contact-box">
-<a href="mailto:kkislam33@gmail.com">📧 kkislam33@gmail.com</a>
-</div>
-<p>We typically respond within 24-48 hours. Your feedback helps us improve SalahTime for the entire Muslim community.</p>
-</div>
-
-<div class="card">
-<h2>Privacy Policy</h2>
-<p><strong>Last updated: 2026</strong></p>
-<p>SalahTime respects your privacy. This policy explains what data we handle and how.</p>
-
-<h3 style="color:#1B5E37; margin-top:15px;">Data We Use</h3>
-<p><strong>Location:</strong> Used only on your device to calculate accurate prayer times for your area. We never send your location to any server or third party.</p>
-<p><strong>Prayer Records:</strong> Your prayer completion records are stored locally on your device only. They are not uploaded anywhere.</p>
-
-<h3 style="color:#1B5E37; margin-top:15px;">Data We Do Not Collect</h3>
-<p>We do not collect personal information, email addresses, names, advertising IDs, or any usage analytics. The app has no accounts, no sign-up, and no tracking.</p>
-
-<h3 style="color:#1B5E37; margin-top:15px;">Third-Party Services</h3>
-<p>SalahTime uses the Aladhan.com public API to fetch prayer time calculations. Only anonymous location coordinates are sent to calculate times. No personal data is shared.</p>
-
-<h3 style="color:#1B5E37; margin-top:15px;">Children's Privacy</h3>
-<p>SalahTime is suitable for all ages and does not knowingly collect data from anyone, including children under 13.</p>
-
-<h3 style="color:#1B5E37; margin-top:15px;">Contact</h3>
-<p>For privacy questions email: <a href="mailto:kkislam33@gmail.com" style="color:#1B5E37;">salahtimepro.support@gmail.com</a></p>
-</div>
-
-<div class="footer">
-<p>© 2026 SalahTime. Made with 💚 for the Muslim Ummah.</p>
-<p>May Allah accept your prayers. 🤲</p>
-</div>
-
-</div>
-</body>
-</html>
+/* HERO */
+.hero {
+    background: var(--navy);
+    border-radius: 32px;
+    margin: 24px auto 0;
+    max-width: 1160px;
+    padding: 80px 60px;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '🌙';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    font-size: 400px;
+    opacity: 0.04;
+    transform: rotate(-15deg);
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.9);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
