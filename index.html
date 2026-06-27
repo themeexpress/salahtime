@@ -133,3 +133,823 @@ nav {
     border-radius: 100px;
     font-size: 13px;
     font-weight: 500;
+    margin-bottom: 28px;
+}
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: white;
+    margin-bottom: 20px;
+}
+.hero h1 .underline {
+    position: relative;
+    display: inline-block;
+}
+.hero h1 .underline::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: var(--gold);
+    z-index: -1;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+.hero-quote {
+    background: rgba(255,255,255,0.05);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 28px 0;
+}
+.hero-quote p {
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.hero-quote cite {
+    color: var(--gold);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+}
+.hero p.desc {
+    color: rgba(255,255,255,0.75);
+    font-size: 17px;
+    margin-bottom: 32px;
+    max-width: 480px;
+}
+.hero-cta {
+    background: white;
+    color: var(--navy);
+    padding: 16px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+.hero-cta:hover { transform: translateY(-3px); }
+
+/* Phone mockup */
+.phone-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone {
+    width: 300px;
+    height: 600px;
+    background: #000;
+    border-radius: 42px;
+    padding: 8px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    transform: rotate(-3deg);
+    position: relative;
+    z-index: 2;
+}
+.phone-inner {
+    background: var(--cream-light);
+    border-radius: 36px;
+    height: 100%;
+    padding: 24px 16px;
+    overflow: hidden;
+}
+.mock-status {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-soft);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+.mock-header {
+    background: white;
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+.mock-date {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.mock-loc {
+    font-size: 11px;
+    color: var(--accent);
+}
+.mock-now {
+    background: var(--navy);
+    color: white;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+.mock-now-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.mock-now-name {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+.mock-now-time {
+    font-size: 13px;
+    opacity: 0.8;
+}
+.mock-list {
+    background: white;
+    border-radius: 14px;
+    padding: 8px 12px;
+}
+.mock-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #F0EBE0;
+    font-size: 12px;
+    font-weight: 500;
+}
+.mock-row:last-child { border: none; }
+.mock-check {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid #D5CFC0;
+}
+.mock-check.done {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+.mock-time-r {
+    margin-left: auto;
+    color: var(--text-soft);
+    font-size: 11px;
+}
+
+/* Floating elements */
+.float-card {
+    position: absolute;
+    background: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 3;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.float-card.top {
+    top: 60px;
+    left: -20px;
+    transform: rotate(-5deg);
+}
+.float-card.bottom {
+    bottom: 80px;
+    right: -30px;
+    transform: rotate(5deg);
+}
+
+/* STATS BAR */
+.stats-bar {
+    background: white;
+    margin: 24px auto;
+    max-width: 1160px;
+    border-radius: 24px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.stat-block {
+    text-align: center;
+    border-right: 1px solid var(--border);
+}
+.stat-block:last-child { border: none; }
+.stat-block .num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--navy);
+    margin-bottom: 4px;
+}
+.stat-block .lbl {
+    color: var(--text-soft);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 0;
+}
+.section-tag {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.section-title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+.section-subtitle {
+    color: var(--text-soft);
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 56px;
+}
+
+/* FEATURES */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.feature-card {
+    background: white;
+    padding: 36px 28px;
+    border-radius: 24px;
+    transition: all 0.3s;
+    border: 1px solid var(--border);
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(26,43,74,0.08);
+}
+.feature-card .icon-wrap {
+    width: 64px;
+    height: 64px;
+    background: var(--cream);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.feature-card p {
+    color: var(--text-soft);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* PROCESS / HOW IT WORKS */
+.process {
+    background: var(--cream-light);
+    border-radius: 32px;
+    margin: 0 24px;
+    padding: 80px 60px;
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+.process-step {
+    background: white;
+    padding: 32px;
+    border-radius: 20px;
+    position: relative;
+}
+.process-num {
+    width: 44px;
+    height: 44px;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.process-step h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.process-step p {
+    color: var(--text-soft);
+    font-size: 14px;
+}
+
+/* TESTIMONIAL */
+.testimonial-wrap {
+    background: var(--navy);
+    color: white;
+    border-radius: 32px;
+    margin: 24px;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.testimonial-wrap::before {
+    content: '"';
+    font-family: 'DM Serif Display', serif;
+    position: absolute;
+    top: -60px;
+    left: 40px;
+    font-size: 300px;
+    color: rgba(255,255,255,0.05);
+    line-height: 1;
+}
+.testimonial-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    line-height: 1.3;
+    max-width: 800px;
+    margin: 0 auto 32px;
+    position: relative;
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 20px;
+}
+.testimonial-avatar {
+    width: 56px;
+    height: 56px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 22px;
+}
+.testimonial-info {
+    text-align: left;
+}
+.testimonial-name {
+    font-weight: 700;
+    font-size: 16px;
+}
+.testimonial-role {
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+}
+
+/* FAQ */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all 0.2s;
+}
+.faq-item:hover { border-color: var(--accent); }
+.faq-q {
+    padding: 24px 28px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+.faq-q::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--accent);
+    transition: transform 0.3s;
+}
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: var(--text-soft);
+    padding: 0 28px;
+}
+.faq-item.open .faq-a {
+    max-height: 300px;
+    padding: 0 28px 24px;
+}
+
+/* CONTACT */
+.contact-card {
+    background: var(--navy);
+    color: white;
+    border-radius: 32px;
+    margin: 0 24px;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.contact-card::before {
+    content: '🤲';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    font-size: 300px;
+    opacity: 0.05;
+}
+.contact-card h2 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+.contact-card p {
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    margin-bottom: 32px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-email-btn {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 18px 36px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+.contact-email-btn:hover { transform: translateY(-3px); }
+
+/* FOOTER */
+footer {
+    padding: 60px 24px 40px;
+    text-align: center;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+}
+.footer-links a {
+    color: var(--text-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+.footer-links a:hover { color: var(--navy); }
+.footer-bottom {
+    color: var(--text-soft);
+    font-size: 13px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* PRIVACY */
+.privacy-section {
+    background: white;
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+}
+.privacy-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.privacy-content h3 {
+    color: var(--navy);
+    font-size: 20px;
+    margin: 24px 0 8px;
+    font-weight: 700;
+}
+.privacy-content p {
+    color: var(--text-soft);
+    margin-bottom: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+    .hero { padding: 50px 30px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 44px; }
+    .section-title { font-size: 36px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .stat-block { border-right: none; }
+    .testimonial-text { font-size: 24px; }
+    .process, .testimonial-wrap, .contact-card { padding: 50px 30px; margin: 0 16px; }
+    .contact-card h2 { font-size: 32px; }
+    .nav-links a:not(.nav-btn) { display: none; }
+    .float-card { display: none; }
+    .phone { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-content">
+<a href="#" class="logo">
+<div class="logo-icon">🌙</div>
+SalahTime
+</a>
+<div class="nav-links">
+<a href="#features">Features</a>
+<a href="#how">How it works</a>
+<a href="#faq">FAQ</a>
+<a href="#contact" class="nav-btn">Get the App</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-grid">
+<div>
+<div class="hero-badge">
+✨ Coming soon to the App Store
+</div>
+<h1>Never miss a <span class="underline">Salah</span> again.</h1>
+<div class="hero-quote">
+<p>"Verily, prayer has been decreed upon the believers a decree of specified times."</p>
+<cite>— Quran 4:103</cite>
+</div>
+<p class="desc">Beautiful prayer times, accurate Adhan, and Qibla compass — designed thoughtfully for your daily worship.</p>
+<a href="#contact" class="hero-cta">
+Get Started →
+</a>
+</div>
+
+<div class="phone-container">
+<div class="float-card top">
+<span>🕌</span> Dhuhr in 1h 12m
+</div>
+<div class="float-card bottom">
+<span>🔥</span> 7 day streak!
+</div>
+
+<div class="phone">
+<div class="phone-inner">
+<div class="mock-status">9:41</div>
+<div class="mock-header">
+<div class="mock-date">Sunday, June 28</div>
+<div class="mock-loc">📍 Inagi, Japan</div>
+</div>
+<div class="mock-now">
+<div class="mock-now-tag">● NOW</div>
+<div class="mock-now-name">Dhuhr</div>
+<div class="mock-now-time">11:45 · 1h 12m left</div>
+</div>
+<div class="mock-list">
+<div class="mock-row"><div class="mock-check done"></div>Fajr<span class="mock-time-r">Completed</span></div>
+<div class="mock-row"><div class="mock-check done"></div>Dhuhr<span class="mock-time-r">11:45</span></div>
+<div class="mock-row"><div class="mock-check"></div>Asr<span class="mock-time-r">15:34</span></div>
+<div class="mock-row"><div class="mock-check"></div>Maghrib<span class="mock-time-r">19:02</span></div>
+<div class="mock-row"><div class="mock-check"></div>Isha<span class="mock-time-r">20:43</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="stats-bar">
+<div class="stat-block">
+<div class="num">100+</div>
+<div class="lbl">Countries supported</div>
+</div>
+<div class="stat-block">
+<div class="num">8</div>
+<div class="lbl">Calculation methods</div>
+</div>
+<div class="stat-block">
+<div class="num">0</div>
+<div class="lbl">Ads or tracking</div>
+</div>
+<div class="stat-block">
+<div class="num">5★</div>
+<div class="lbl">User rating</div>
+</div>
+</div>
+
+<section id="features">
+<div class="container">
+<div class="section-tag">Features</div>
+<h2 class="section-title">Everything you need for daily worship.</h2>
+<p class="section-subtitle">Thoughtfully crafted features that help you maintain consistency, stay connected to your faith, and grow your spiritual practice.</p>
+
+<div class="features-grid">
+<div class="feature-card">
+<div class="icon-wrap">🕌</div>
+<h3>Accurate Prayer Times</h3>
+<p>Precise Salah timings calculated for your exact location. Auto-adjusts as you travel anywhere in the world.</p>
+</div>
+<div class="feature-card">
+<div class="icon-wrap">🔔</div>
+<h3>Beautiful Adhan</h3>
+<p>Customize per-prayer notifications. Choose Silent, Vibrate, or Loud individually for each Salah.</p>
+</div>
+<div class="feature-card">
+<div class="icon-wrap">🧭</div>
+<h3>Qibla Compass</h3>
+<p>Smooth, accurate direction to Makkah from anywhere on Earth. Real-time compass that just works.</p>
+</div>
+<div class="feature-card">
+<div class="icon-wrap">✓</div>
+<h3>Prayer Tracking</h3>
+<p>Mark prayers complete with one tap. Build streaks, track patterns, and stay consistent.</p>
+</div>
+<div class="feature-card">
+<div class="icon-wrap">📊</div>
+<h3>Daily Statistics</h3>
+<p>Beautiful daily, weekly, and monthly insights. See your spiritual journey unfold visually.</p>
+</div>
+<div class="feature-card">
+<div class="icon-wrap">🔒</div>
+<h3>Privacy First</h3>
+<p>Zero tracking. No accounts. Everything stays on your device. Your worship, your data.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="process" id="how">
+<div class="container" style="padding: 0;">
+<div class="section-tag">How it works</div>
+<h2 class="section-title">Get started in 3 simple steps.</h2>
+
+<div class="process-grid">
+<div class="process-step">
+<div class="process-num">1</div>
+<h3>Download SalahTime</h3>
+<p>Get the app free from the App Store. No sign-up required to start.</p>
+</div>
+<div class="process-step">
+<div class="process-num">2</div>
+<h3>Allow Location</h3>
+<p>Grant location access so we can calculate accurate prayer times for your area.</p>
+</div>
+<div class="process-step">
+<div class="process-num">3</div>
+<h3>Never Miss a Prayer</h3>
+<p>Receive beautiful Adhan reminders and track your daily prayers effortlessly.</p>
+</div>
+</div>
+</div>
+</div>
+
+<section>
+<div class="testimonial-wrap">
+<div class="testimonial-text">
+A clean, beautiful app that helps me stay consistent with my daily prayers. Exactly what I needed.
+</div>
+<div class="testimonial-author">
+<div class="testimonial-avatar">A</div>
+<div class="testimonial-info">
+<div class="testimonial-name">Amina K.</div>
+<div class="testimonial-role">Tokyo, Japan</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+<div class="section-tag">FAQ</div>
+<h2 class="section-title">Questions, answered.</h2>
+
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">How accurate are the prayer times?</div>
+<div class="faq-a">Prayer times are calculated using your precise GPS location and the Aladhan.com calculation engine. We support 8 different calculation methods including Muslim World League, Karachi, ISNA, and more — letting you match your local mosque's timing.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Does the app work offline?</div>
+<div class="faq-a">Yes! Prayer times are cached after the first fetch, so you can use the app offline. Internet is only needed when you change locations or first launch the app.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Is my data private?</div>
+<div class="faq-a">100% yes. We don't collect any personal data, don't track users, and don't use analytics. Your location is used only on your device to calculate prayer times. Nothing is sent to any server.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Can I customize Adhan for each prayer?</div>
+<div class="faq-a">Yes. Go to Settings → Adhan & Notifications and set Silent, Vibrate, or Loud individually for Fajr, Dhuhr, Asr, Maghrib, and Isha.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Is the app free?</div>
+<div class="faq-a">Yes, SalahTime is completely free with no ads, no in-app purchases, and no subscriptions. Built as a gift to the Muslim community.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">How does the Qibla compass work?</div>
+<div class="faq-a">It uses your iPhone's magnetometer and current GPS location to calculate the precise direction to the Kaaba in Makkah. Hold your phone flat for best accuracy.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact-card">
+<div style="position: relative; z-index: 1;">
+<h2>Build a consistent<br>daily habit today.</h2>
+<p>Join Muslims around the world who trust SalahTime to stay connected with every Salah.</p>
+<a href="mailto:salahtimepro.support@gmail.com" class="contact-email-btn">
+✉️ salahtimepro.support@gmail.com
+</a>
+</div>
+</div>
+</section>
+
+<section class="privacy-section" id="privacy">
+<div class="privacy-content">
+<div class="section-tag" style="text-align: center; display: block;">Privacy</div>
+<h2 style="text-align: center; font-size: 36px; margin-bottom: 32px; font-weight: 800;">Privacy Policy</h2>
+
+<p><strong>Last updated: 2026</strong></p>
+<p>SalahTime respects your privacy. This policy explains what data we handle and how.</p>
+
+<h3>Data We Use</h3>
+<p><strong>Location:</strong> Used only on your device to calculate accurate prayer times for your area. We never send your location to any server or third party.</p>
+<p><strong>Prayer Records:</strong> Stored locally on your device only. Not uploaded anywhere.</p>
+
+<h3>Data We Do Not Collect</h3>
+<p>We do not collect personal information, email addresses, names, advertising IDs, or any usage analytics. The app has no accounts, no sign-up, and no tracking.</p>
+
+<h3>Third-Party Services</h3>
+<p>SalahTime uses the Aladhan.com public API to fetch prayer time calculations. Only anonymous location coordinates are sent. No personal data is shared.</p>
+
+<h3>Children's Privacy</h3>
+<p>SalahTime is suitable for all ages and does not knowingly collect data from anyone.</p>
+
+<h3>Contact</h3>
+<p>For privacy questions, contact: <a href="mailto:salahtimepro.support@gmail.com" style="color: var(--accent); font-weight: 600;">salahtimepro.support@gmail.com</a></p>
+</div>
+</section>
+
+<footer>
+<div class="logo" style="justify-content: center; color: var(--navy);">
+<div class="logo-icon">🌙</div>
+SalahTime
+</div>
+<div class="footer-links">
+<a href="#features">Features</a>
+<a href="#how">How it works</a>
+<a href="#faq">FAQ</a>
+<a href="#privacy">Privacy</a>
+<a href="mailto:salahtimepro.support@gmail.com">Contact</a>
+</div>
+<div class="footer-bottom">
+© 2026 SalahTime. Made with 💚 for the Muslim Ummah.<br>
+May Allah accept your prayers. 🤲
+</div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+        item.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+</html>
